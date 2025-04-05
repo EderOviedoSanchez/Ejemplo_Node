@@ -20,7 +20,7 @@ app.listen(process.env.PORT, async () =>{
     try{
         await sequelize.authenticate();
         console.log("Conexión establecida con éxito a la base de datos.");
-        await sequelize.sync({alter: true}) /**Cambia automáticamente las tablas al haber cambios. */
+        await sequelize.sync({alter: true}); /**Cambia automáticamente las tablas al haber cambios. */
         console.log("Tablas sincronizadas");
     } catch (error) {
         console.error("Error conectando a la base de datos:", error); /**Lanza el mensaje de error y especifica el error. */

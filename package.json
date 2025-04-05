@@ -11,6 +11,7 @@
   "description": "Prueba de servidor Node.js",
   "dependencies": {
     "-": "^0.0.1",
+    "axios": "^1.8.4",
     "dotenv": "^16.4.7",
     "express": "^5.1.0",
     "pg": "^8.14.1",

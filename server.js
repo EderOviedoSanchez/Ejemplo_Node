@@ -1,8 +1,13 @@
 require("dotenv").config();
 
 const express = require('express');
-
+/**Importar la herramienta de cors. */
+const cors = require('cors');
+/**Decirle a Node que vamos a utilizar express. */
 const app = express();
+/**Permitir todas las solicitudes. */
+app.use(cors());
+/**Este middleware es obligatorio. */
 app.use(express.json());
 
 const sequelize = require(`./src/models/dbconnection`);

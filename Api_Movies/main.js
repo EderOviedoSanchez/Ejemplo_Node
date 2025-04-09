@@ -15,10 +15,11 @@ getmovies();
 
 function showmovies(movies) {
     console.log("Entro a showmovies.")
-    const container = document.getElementById("movies");
+    const container = document.getElementById("moviesContainer");/**Esto vincula esta parte del código con el id que definí en el html.
+     */
     /**Limpiar el contenedor (Quitar cualquier elemento del div) antes de agregar nuevas películas. */
-    container.innerHTML = "";
-
+    // container.innerHTML = "";
+    
     movies.forEach(movie => {
         const movieelement = document.createElement("div");
         /**Agregar una clase al elemento. */
@@ -29,8 +30,3 @@ function showmovies(movies) {
         container.appendChild(movieelement);
     });
 }
-
-movieelement.addEventListener("click", () => {
-    /**Redirige a detail.html pasando el id de la película. */
-    window.location.href = `detail.html?movieId = ${movie.id}`;
-})
